@@ -4,12 +4,10 @@
 Tools:
 Cluster autoscaler: We can implement cluster autoscaler with threshold values such ad CPU utilization to trigger number of nodes in the cluster.
 
-Jmeter: Performance Load testing and benchmark testing of the cluser . Once initial set of applications deployed into the EKS cluster we need to perform a benchmark test for the infra to figure out the weak points and then to improve it all.
-
 Metrics: Cloudwatch to collect cluster events and logs.
          Instana/Newrelic - are APM tools and which will help us to collect difference metrics- Availability metrics, business metrics, app metrics, server metrics, events, observability, tracing, and alerting for the platform.
 
-ELK stack: We need to collect all the logs from applications and cluster in a centralized way and ELK will help us to achieve it.
+ELK stack: We need to collect all the logs from applications and cluster in a centralized way and ELK will help us to achieve it. We use fluentd as side car container with applications to pull the logs and then send to logstash using any message queuing system like cloudamqp, we cal also use logstash agent containers to collect logs from application pods.
 
 GitOps: GitOps approach will help us to make Git as the source of truth for entire platform and applications deployed. It will help us to be consistent even in a case of cluster loss.
 
