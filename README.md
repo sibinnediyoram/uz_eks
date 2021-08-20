@@ -39,5 +39,5 @@ We can go for canary deployments since it will help us to create separate set of
 We can use Argo, for deployments and kustomize and standalone k8s manifests to prepare the deployment.
 
 **Task2**:
-Jenkinspipeline file is updated in the repository and we can use the same to deploy the cluster. We can create cluster based tfvars file and can apply it with argument -var-file corresponding to respective cluster environments and configurations.
+Jenkinspipeline file is updated in the repository and we can use the same to deploy the cluster. We can create multiple tfvars files for each environment where we need to create the eks cluster and can apply it with argument -var-file corresponding to respective cluster environments and configurations.
 
