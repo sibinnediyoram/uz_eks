@@ -32,7 +32,7 @@ Thanos: Thanos is a persistent storage solution for prometheus since prometheus 
 
 Opsgenie: Its an alerting tool which provided api to integrate with most kinds of the monitoring tools. Opsgenie will receive the alerts and will route it to configured mailids, phone numbers, messaging solutions like slack, msteams etc..
 
-Cloudwatch: Since the cluster deployed to EKS, cloudwatch will be a great aws native tool to monitor the cluster and alert us in case of any threhold breakages.
+Cloudwatch: Since the cluster deployed to EKS, cloudwatch will be a great aws native tool to monitor the cluster and to manage alert thresholds.
 
 Deployment approach:
 We can go for canary deployments since it will help us to create separate set of pods of application and once it become healthy we can redirect a part of traffic to this new pods. Once the testing and verification completed we can scale the new application and can remove old one. 
