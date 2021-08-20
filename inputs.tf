@@ -1,3 +1,7 @@
+variable "tfstate_bucket" {
+  default = "uz-app-infra-eu"
+}
+
 #VPC#
 variable "iac_environment_tag" {
   type        = string
@@ -91,7 +95,13 @@ variable "k8s_cluster_version" {
     default = "1.17"
 }
 
+variable "ami_type" {
+}
+
+variable "nodeg_disk_size" {
+}
+
 #SG#
 variable "cidr_blocks_one" {
-    default = ["10.0.0.0/8",]
+    default = ["10.0.0.0/16",]
 }

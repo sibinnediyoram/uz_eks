@@ -1,4 +1,6 @@
 profile = "default"
+region  = "eu-central-1"
+workspace_key_prefix = "environment"
 iac_environment_tag = "development"
 single_nat_gateway = "true"
 asg_desired_capacity = 1
@@ -9,4 +11,6 @@ w1_instance_type = "t3.medium"
 w1_asg_desired_capacity = 1
 w1_asg_max_capacity = 5
 w1_asg_min_capacity = 1
-
+ami_type = "AL2_x86_64"
+nodeg_disk_size = 50
+w_root_volume_type = "gp2"

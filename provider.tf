@@ -1,4 +1,5 @@
 provider "aws" {
+  alias = "development"
   region = "eu-central-1"
 }
 
