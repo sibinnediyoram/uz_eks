@@ -1,4 +1,4 @@
-Task1:
+**Task1**:
  This part consists of the infrastructure deployment code and tools recommendation to make it as production grade.
 
 Tools:
@@ -17,7 +17,7 @@ ArgoCD: Argo is a GitOps tool, part of continuous delivery. Which will help us t
 
 Backup and Restore: For stateful components (databases). we need to ensure that timely backups are in place so that we will not loose data in case of any incident.
 
-Monitoring tools:
+**Monitoring tools**:
 Metrics server: It will collect metrices like CPU, Memory, IO etc.. We can implement horizontal pod autoscaler for applications pods based on the metrices 
 
 Heapster: Heapster is a cluster-wide aggregator of monitoring and event data. It currently supports Kubernetes natively and works on all Kubernetes setups. Heapster runs as a pod in the cluster, similar to how any Kubernetes application would run. The Heapster pod discovers all nodes in the cluster and queries usage information from the nodes’ Kubelets, the on-machine Kubernetes agent. The Kubelet itself fetches the data from cAdvisor. We can save this metrics to any backend solutions like influxdb and can visualize the same for performance analysis using grafana.
@@ -34,10 +34,10 @@ Opsgenie: Its an alerting tool which provided api to integrate with most kinds o
 
 Cloudwatch: Since the cluster deployed to EKS, cloudwatch will be a great aws native tool to monitor the cluster and to manage alert thresholds.
 
-Deployment approach:
+**Deployment approach**:
 We can go for canary deployments since it will help us to create separate set of pods of application and once it become healthy we can redirect a part of traffic to this new pods. Once the testing and verification completed we can scale the new application and can remove old one. 
 We can use Argo, for deployments and kustomize and standalone k8s manifests to prepare the deployment.
 
-Task2:
+**Task2**:
 Jenkinspipeline file is updated in the repository and we can use the same to deploy the cluster. We can create cluster based tfvars file and can apply it with argument -var-file corresponding to respective cluster environments and configurations.
 
