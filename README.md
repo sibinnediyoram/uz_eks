@@ -11,7 +11,7 @@ Tools:
 
 **GitOps**: GitOps approach will help us to make Git as the single source of code for entire platform and applications deployed. It will help us to be consistent in terms of versioning and application deployments. 
 
-**ArgoCD**: Argo is a GitOps tool, part of continuous delivery. Which will help us to implement the CD part in an automated way with a UI. The UI is helpful to get the app version deployed and also we can applu manual triggers if needed.
+**ArgoCD**: Argo is a GitOps tool, using for continuous delivery. Which will help us to implement the CD process and also provided a GUI. The UI is helpful to get the app version deployed and also we can apply manual triggers if needed.
 
 **Backup and Restore**: For stateful components (databases). we need to ensure that timely backups are in place so that we will not loose data in case of any incident.
 
@@ -36,7 +36,7 @@ Tools:
 
 **Deployment approach**:
 We can go for canary deployments since it will help us to create separate set of pods of application and once it become healthy we can redirect a part of traffic to this new pods. Once the testing and verification completed we can scale the new application and can remove old one. 
-We can use Argo, for deployments and kustomize and standalone k8s manifests to prepare the deployment.
+We can use Argo, for deployments and kustomize or helm and standalone k8s manifests to prepare the deployment.
 
 **Task2**:
 Jenkinspipeline file is updated in the repository and we can use the same to deploy the cluster. We can create multiple tfvars files for each environment where we need to create the eks cluster and can apply it with argument -var-file corresponding to respective cluster environments and configurations. Also we can isolate the statefiles using workspace switching.
